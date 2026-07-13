@@ -1,0 +1,10 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vision Solutions Limited">
+  <defs>
+    <linearGradient id="vsGrad" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E86C4"/><stop offset="1" stop-color="#8DC63F"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 3 57 17.5 57 46.5 32 61 7 46.5 7 17.5Z" stroke="url(#vsGrad)" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M23 21 34.5 32 23 43" stroke="#1E86C4" stroke-width="4.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 21 43.5 32 32 43" stroke="#8DC63F" stroke-width="4.3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

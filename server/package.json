@@ -1,0 +1,18 @@
+{
+  "name": "vision-solutions-server",
+  "version": "1.0.0",
+  "description": "Express + Neon Postgres API for Vision Solutions Limited",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0"
+  }
+}
