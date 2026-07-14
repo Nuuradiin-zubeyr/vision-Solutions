@@ -19,9 +19,9 @@ export default function Contact() {
               <span className="w-9 h-9 rounded-full border border-white/20 grid place-items-center">☎</span>
               +252 61 5942403
             </a>
-            <a href="mailto:hello@vsolcorp.com" className="flex items-center gap-3 text-white/80 hover:text-lime transition">
+            <a href="mailto:visolutd@visionsolution.tech" className="flex items-center gap-3 text-white/80 hover:text-lime transition">
               <span className="w-9 h-9 rounded-full border border-white/20 grid place-items-center">✉</span>
-              hello@vsolcorp.com
+              visolutd@visionsolution.tech
             </a>
             <div className="flex items-center gap-3 text-white/80">
               <span className="w-9 h-9 rounded-full border border-white/20 grid place-items-center">◎</span>

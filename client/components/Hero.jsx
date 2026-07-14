@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section id="top" className="hero-glow relative overflow-hidden text-white">
@@ -52,9 +54,9 @@ export default function Hero() {
           <a href="#contact" className="px-6 py-3 rounded-full bg-lime text-navy-950 font-semibold text-sm hover:bg-lime-bright transition">
             Start a project
           </a>
-          <a href="#work" className="px-6 py-3 rounded-full border border-white/25 text-white font-semibold text-sm hover:bg-white/10 transition">
+          <Link href="/about" className="px-6 py-3 rounded-full border border-white/25 text-white font-semibold text-sm hover:bg-white/10 transition">
             Explore our work
-          </a>
+          </Link>
         </div>
       </div>
 

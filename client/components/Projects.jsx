@@ -1,5 +1,55 @@
 import { projects } from "@/lib/data";
 
+/* small banner illustrations per project kind */
+const bannerArt = {
+  chart: (
+    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
+      <path d="M30 115 L110 85 L190 100 L270 55 L360 30" stroke="#8DC63F" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <g fill="#fff" opacity=".9"><circle cx="110" cy="85" r="4" /><circle cx="190" cy="100" r="4" /><circle cx="270" cy="55" r="4" /></g>
+      <g stroke="#7FC7EC" strokeWidth="1" opacity=".4"><path d="M30 40h330M30 75h330M30 110h330" strokeDasharray="3 7" /></g>
+    </svg>
+  ),
+  leaf: (
+    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
+      <path d="M200 130 C200 70 240 40 300 38 C298 98 258 128 200 130Z" stroke="#0A1145" strokeWidth="2.5" fill="rgba(255,255,255,.25)" />
+      <path d="M200 130 C200 70 160 40 100 38 C102 98 142 128 200 130Z" stroke="#0A1145" strokeWidth="2.5" fill="rgba(255,255,255,.15)" />
+      <path d="M200 132V60" stroke="#0A1145" strokeWidth="2.5" strokeLinecap="round" />
+    </svg>
+  ),
+  cart: (
+    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
+      <g stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity=".9">
+        <path d="M140 40h20l16 60h74l16-44H172" /><circle cx="188" cy="118" r="7" /><circle cx="252" cy="118" r="7" />
+      </g>
+      <g stroke="#8DC63F" strokeWidth="2.5" strokeLinecap="round"><path d="M300 55l24 0M312 43l0 24" /></g>
+    </svg>
+  ),
+  health: (
+    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
+      <rect x="168" y="45" width="64" height="64" rx="14" fill="rgba(255,255,255,.22)" stroke="#fff" strokeWidth="2.5" />
+      <path d="M200 60v34M183 77h34" stroke="#8DC63F" strokeWidth="5" strokeLinecap="round" />
+      <path d="M90 78h40l10-20 14 40 10-20h36" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity=".8" />
+    </svg>
+  ),
+  edu: (
+    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
+      <path d="M200 42 300 74 200 106 100 74Z" stroke="#fff" strokeWidth="3" strokeLinejoin="round" fill="rgba(255,255,255,.18)" />
+      <path d="M258 92v26c0 10-26 18-58 18s-58-8-58-18V92" stroke="#8DC63F" strokeWidth="3" strokeLinecap="round" />
+      <path d="M300 74v34" stroke="#8DC63F" strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  ),
+  truck: (
+    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
+      <g stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity=".9">
+        <rect x="120" y="55" width="110" height="48" rx="6" /><path d="M230 70h44l24 20v13h-68z" />
+        <circle cx="155" cy="112" r="9" /><circle cx="262" cy="112" r="9" />
+      </g>
+      <path d="M60 112h40M40 92h50" stroke="#8DC63F" strokeWidth="3" strokeLinecap="round" strokeDasharray="8 8" />
+    </svg>
+  ),
+};
+
+
 function Stat({ value, label }) {
   return (
     <div>
@@ -53,7 +103,8 @@ function FeaturedCard({ p }) {
 function ProjectCard({ p }) {
   return (
     <article className="card-lift group bg-white rounded-2xl border border-black/5 overflow-hidden hover:shadow-xl reveal">
-      <div className={`h-36 bg-gradient-to-br ${p.grad} relative p-6 flex items-end`}>
+      <div className={`h-36 bg-gradient-to-br ${p.grad} relative p-6 flex items-end overflow-hidden`}>
+        {p.kind ? bannerArt[p.kind] : null}
         <span
           className={`absolute top-4 right-4 text-[11px] font-semibold px-3 py-1 rounded-full ${
             p.status === "Ongoing" || p.status === "Live"

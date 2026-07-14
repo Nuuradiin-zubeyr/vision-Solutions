@@ -92,24 +92,48 @@ export const projects = [
     featured: true,
   },
   {
-    client: "BlueXpress Technologies",
-    tag: "Full-stack · API",
-    title: "Real-Time Operations Dashboard",
+    client: "Regional Retailer",
+    tag: "E-commerce · Mobile",
+    title: "Online Store & Delivery App",
     body:
-      "A unified dashboard and API layer giving live visibility and control over day-to-day operations.",
-    status: "Ongoing",
-    stats: [["Real-time", "Data"], ["99.9%", "Uptime"]],
-    grad: "from-teal to-navy-950",
+      "A mobile-first e-commerce platform with order tracking and local payment integration for a growing retail brand.",
+    status: "Completed",
+    stats: [["10k+", "Orders processed"], ["2", "Platforms (iOS/Android)"]],
+    grad: "from-teal via-royal-500 to-navy-900",
+    kind: "cart",
   },
   {
-    client: "Asal Institute of Agriculture",
-    tag: "AI · Advisory",
-    title: "AI Crop Advisory System",
+    client: "Community Health Network",
+    tag: "Health · Records",
+    title: "Clinic Records & Appointments System",
     body:
-      "An AI-powered advisory tool delivering localized, data-driven guidance to improve yields and resilience.",
-    status: "Pilot",
-    stats: [["AI", "Powered"], ["3", "Regions"]],
-    grad: "from-navy-900 to-royal-500",
+      "A secure patient-records and appointment system for clinics, built to work reliably in low-connectivity settings.",
+    status: "Completed",
+    stats: [["6", "Clinics onboarded"], ["Offline", "First"]],
+    grad: "from-royal-700 to-teal",
+    kind: "health",
+  },
+  {
+    client: "Education Partner",
+    tag: "EdTech · LMS",
+    title: "E-Learning & Exams Platform",
+    body:
+      "A learning management system with course delivery, online exams and progress analytics for students and teachers.",
+    status: "Completed",
+    stats: [["5k+", "Students"], ["120+", "Courses"]],
+    grad: "from-navy-900 via-royal-500 to-lime",
+    kind: "edu",
+  },
+  {
+    client: "Logistics Operator",
+    tag: "Logistics · GPS",
+    title: "Fleet Tracking & Dispatch System",
+    body:
+      "A GPS fleet-tracking and dispatch platform giving operators live vehicle locations, routes and delivery status.",
+    status: "Completed",
+    stats: [["150+", "Vehicles tracked"], ["24/7", "Monitoring"]],
+    grad: "from-navy-950 via-teal to-lime",
+    kind: "truck",
   },
 ];
 
@@ -125,11 +149,13 @@ export const partners = [
   { name: "Ecozen", logo: "/logos/ecozen.png" },
 ];
 
+// To use real photos: drop the image in client/public/team/ (e.g. ceo.jpg) and set
+// its path in `photo` below (e.g. photo: "/team/ceo.jpg"). Leave "" to use the avatar.
 export const team = [
-  { slug: "ceo", name: "Cabdiraxmaan Yuusuf", role: "Founder & CEO" },
-  { slug: "cto", name: "Hodan Cabdi", role: "Chief Technology Officer" },
-  { slug: "eng", name: "Maxamed Faarax", role: "Head of Software Engineering" },
-  { slug: "cloud", name: "Fadumo Aadan", role: "AI & Data Lead" },
-  { slug: "sec", name: "Cabdullahi Xasan", role: "Cybersecurity Lead" },
-  { slug: "cx", name: "Sagal Maxamuud", role: "Head of Client Solutions" },
+  { slug: "ceo", name: "Cabdiraxmaan Yuusuf", role: "Founder & CEO", photo: "" },
+  { slug: "cto", name: "Hodan Cabdi", role: "Chief Technology Officer", photo: "" },
+  { slug: "eng", name: "Maxamed Faarax", role: "Head of Software Engineering", photo: "" },
+  { slug: "cloud", name: "Fadumo Aadan", role: "AI & Data Lead", photo: "" },
+  { slug: "sec", name: "Cabdullahi Xasan", role: "Cybersecurity Lead", photo: "" },
+  { slug: "cx", name: "Sagal Maxamuud", role: "Head of Client Solutions", photo: "" },
 ];

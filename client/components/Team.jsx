@@ -23,7 +23,7 @@ export default function Team() {
             >
               <div className="w-24 h-24 mx-auto rounded-full overflow-hidden ring-2 ring-lime/40 bg-paper">
                 <img
-                  src={`/team/${m.slug}.svg`}
+                  src={m.photo || `/team/${m.slug}.svg`}
                   alt={m.name}
                   loading="lazy"
                   className="w-full h-full object-cover"

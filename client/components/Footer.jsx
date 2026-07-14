@@ -1,13 +1,12 @@
+import Link from "next/link";
 import Logo from "./Logo";
 
 const links = [
-  { href: "#who", label: "Who we are" },
-  { href: "#work", label: "What we do" },
-  { href: "#team", label: "Team" },
-  { href: "#mission", label: "Mission" },
-  { href: "#projects", label: "Projects" },
-  { href: "#partners", label: "Partners" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#partners", label: "Partners" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Footer() {
@@ -26,15 +25,15 @@ export default function Footer() {
           </div>
           <div className="flex flex-wrap gap-x-7 gap-y-2 text-[13px] text-white/60">
             {links.map((l) => (
-              <a key={l.href} href={l.href} className="hover:text-lime transition">
+              <Link key={l.href} href={l.href} className="hover:text-lime transition">
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-[12px] text-white/40">
           <span>© {new Date().getFullYear()} Vision Solutions Limited. All rights reserved.</span>
-          <span>Via Taleex, KM-4, Mogadishu · hello@vsolcorp.com</span>
+          <span>Via Taleex, KM-4, Mogadishu · visolutd@visionsolution.tech</span>
         </div>
       </div>
     </footer>
