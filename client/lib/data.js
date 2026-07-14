@@ -138,7 +138,6 @@ export const projects = [
 ];
 
 export const partners = [
-  { name: "Odoros", logo: "/logos/odoros.png" },
   { name: "Hormuud Salaam Foundation", logo: "/logos/hsf.png" },
   { name: "Save the Children", logo: "/logos/save-the-children.png" },
   { name: "Asal Institute of Agriculture", logo: "/logos/aia.png" },
@@ -152,10 +151,10 @@ export const partners = [
 // To use real photos: drop the image in client/public/team/ (e.g. ceo.jpg) and set
 // its path in `photo` below (e.g. photo: "/team/ceo.jpg"). Leave "" to use the avatar.
 export const team = [
-  { slug: "ceo", name: "Cabdiraxmaan Yuusuf", role: "Founder & CEO", photo: "" },
-  { slug: "cto", name: "Hodan Cabdi", role: "Chief Technology Officer", photo: "" },
-  { slug: "eng", name: "Maxamed Faarax", role: "Head of Software Engineering", photo: "" },
-  { slug: "cloud", name: "Fadumo Aadan", role: "AI & Data Lead", photo: "" },
-  { slug: "sec", name: "Cabdullahi Xasan", role: "Cybersecurity Lead", photo: "" },
-  { slug: "cx", name: "Sagal Maxamuud", role: "Head of Client Solutions", photo: "" },
+  { slug: "ceo", name: "Cabdiraxmaan Yuusuf", role: "Founder & CEO", photo: "/team/ceo.jpg" },
+  { slug: "cto", name: "Hodan Cabdi", role: "Chief Technology Officer", photo: "/team/cto.jpg" },
+  { slug: "eng", name: "Maxamed Faarax", role: "Head of Software Engineering", photo: "/team/eng.jpg" },
+  { slug: "cloud", name: "Fadumo Aadan", role: "AI & Data Lead", photo: "/team/cloud.jpg" },
+  { slug: "sec", name: "Cabdullahi Xasan", role: "Cybersecurity Lead", photo: "/team/sec.jpg" },
+  { slug: "cx", name: "Sagal Maxamuud", role: "Head of Client Solutions", photo: "/team/cx.jpg" },
 ];

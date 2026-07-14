@@ -1,51 +1,51 @@
 import { projects } from "@/lib/data";
 
-/* small banner illustrations per project kind */
+/* Lucide-style icons (MIT) in a glass "app chip" — consistent, professional banners */
+const chip = (icon, accent) => (
+  <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 150" fill="none" aria-hidden="true">
+    <circle cx="330" cy="75" r="62" stroke="#ffffff" strokeOpacity=".18" strokeWidth="1.4" />
+    <circle cx="330" cy="75" r="86" stroke="#ffffff" strokeOpacity=".09" strokeWidth="1.2" />
+    <rect x="290" y="35" width="80" height="80" rx="20" fill="rgba(255,255,255,.13)" stroke="rgba(255,255,255,.3)" strokeWidth="1.4" />
+    <g transform="translate(299 44) scale(2.58)" stroke="#ffffff" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      {icon}
+    </g>
+    {accent}
+  </svg>
+);
+
 const bannerArt = {
-  chart: (
-    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
-      <path d="M30 115 L110 85 L190 100 L270 55 L360 30" stroke="#8DC63F" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      <g fill="#fff" opacity=".9"><circle cx="110" cy="85" r="4" /><circle cx="190" cy="100" r="4" /><circle cx="270" cy="55" r="4" /></g>
-      <g stroke="#7FC7EC" strokeWidth="1" opacity=".4"><path d="M30 40h330M30 75h330M30 110h330" strokeDasharray="3 7" /></g>
-    </svg>
+  cart: chip(
+    <>
+      <circle cx="8" cy="21" r="1" />
+      <circle cx="19" cy="21" r="1" />
+      <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" stroke="#8DC63F" />
+    </>,
+    null
   ),
-  leaf: (
-    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
-      <path d="M200 130 C200 70 240 40 300 38 C298 98 258 128 200 130Z" stroke="#0A1145" strokeWidth="2.5" fill="rgba(255,255,255,.25)" />
-      <path d="M200 130 C200 70 160 40 100 38 C102 98 142 128 200 130Z" stroke="#0A1145" strokeWidth="2.5" fill="rgba(255,255,255,.15)" />
-      <path d="M200 132V60" stroke="#0A1145" strokeWidth="2.5" strokeLinecap="round" />
-    </svg>
+  health: chip(
+    <>
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+      <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" stroke="#8DC63F" />
+    </>,
+    null
   ),
-  cart: (
-    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
-      <g stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity=".9">
-        <path d="M140 40h20l16 60h74l16-44H172" /><circle cx="188" cy="118" r="7" /><circle cx="252" cy="118" r="7" />
-      </g>
-      <g stroke="#8DC63F" strokeWidth="2.5" strokeLinecap="round"><path d="M300 55l24 0M312 43l0 24" /></g>
-    </svg>
+  edu: chip(
+    <>
+      <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+      <path d="M22 10v6" stroke="#8DC63F" />
+      <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+    </>,
+    null
   ),
-  health: (
-    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
-      <rect x="168" y="45" width="64" height="64" rx="14" fill="rgba(255,255,255,.22)" stroke="#fff" strokeWidth="2.5" />
-      <path d="M200 60v34M183 77h34" stroke="#8DC63F" strokeWidth="5" strokeLinecap="round" />
-      <path d="M90 78h40l10-20 14 40 10-20h36" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity=".8" />
-    </svg>
-  ),
-  edu: (
-    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
-      <path d="M200 42 300 74 200 106 100 74Z" stroke="#fff" strokeWidth="3" strokeLinejoin="round" fill="rgba(255,255,255,.18)" />
-      <path d="M258 92v26c0 10-26 18-58 18s-58-8-58-18V92" stroke="#8DC63F" strokeWidth="3" strokeLinecap="round" />
-      <path d="M300 74v34" stroke="#8DC63F" strokeWidth="3" strokeLinecap="round" />
-    </svg>
-  ),
-  truck: (
-    <svg className="absolute inset-0 w-full h-full opacity-60" viewBox="0 0 400 150" fill="none" aria-hidden="true">
-      <g stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity=".9">
-        <rect x="120" y="55" width="110" height="48" rx="6" /><path d="M230 70h44l24 20v13h-68z" />
-        <circle cx="155" cy="112" r="9" /><circle cx="262" cy="112" r="9" />
-      </g>
-      <path d="M60 112h40M40 92h50" stroke="#8DC63F" strokeWidth="3" strokeLinecap="round" strokeDasharray="8 8" />
-    </svg>
+  truck: chip(
+    <>
+      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+      <path d="M15 18H9" />
+      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" stroke="#8DC63F" />
+      <circle cx="17" cy="18" r="2" />
+      <circle cx="7" cy="18" r="2" />
+    </>,
+    null
   ),
 };
 
